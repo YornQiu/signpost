@@ -1,0 +1,60 @@
+{
+  "name": "vivid",
+  "version": "0.0.1",
+  "description": "a tiny http framework",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "lib",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "autocannon -c 100 -d 10 -p 10 http://localhost:9000/test/500",
+    "test:koa": "autocannon -c 100 -d 10 -p 10 http://localhost:9001/test/500",
+    "test:express": "autocannon -c 100 -d 10 -p 10 http://localhost:9002/test/500",
+    "test:fastify": "autocannon -c 100 -d 10 -p 10 http://localhost:9003/test/500"
+  },
+  "keywords": [
+    "web",
+    "http",
+    "server"
+  ],
+  "author": "Yorn Qiu",
+  "license": "MIT",
+  "peerDependencies": {
+    "formidable": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/eslint-parser": "^7.21.3",
+    "autocannon": "^7.11.0",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "express": "^4.18.2",
+    "fastify": "^4.17.0",
+    "koa": "^2.14.2",
+    "koa-router": "^12.0.0",
+    "prettier": "^2.8.6"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser",
+      "ecmaVersion": 2020
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false,
+    "printWidth": 120
+  }
+}
