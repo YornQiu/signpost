@@ -48,7 +48,7 @@ Performance test with autocannon
 
 ![fastify](./images/4.png)
 
-Vivid is faster than koa and express, but fastify is really NB!
+Signpost is faster than koa and express.
 
 # Licence
 

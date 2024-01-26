@@ -1,3 +1,7 @@
+/**
+ * Note: You need to install the dependencies first.
+ */
+
 const Koa = require('koa')
 const KoaRouter = require('koa-router')
 const express = require('express')
