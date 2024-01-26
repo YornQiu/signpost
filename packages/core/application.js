@@ -1,3 +1,11 @@
+/*
+ * @Author: Yorn Qiu
+ * @Date: 2022-05-23 09:55:40
+ * @LastEditors: Yorn Qiu
+ * @LastEditTime: 2024-01-26 16:13:18
+ * @FilePath: /signpost/packages/core/application.js
+ * @Description:
+ */
 const EventEmitter = require('node:events')
 const http = require('node:http')
 const Stream = require('node:stream')

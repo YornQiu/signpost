@@ -1,0 +1,16 @@
+{
+  "name": "@signpost/core",
+  "version": "0.0.1",
+  "description": "a tiny, rapid http framework",
+  "private": true,
+  "author": "Yorn Qiu",
+  "license": "MIT",
+  "files": [
+    "application.js"
+  ],
+  "keywords": [
+    "web",
+    "http",
+    "server"
+  ]
+}

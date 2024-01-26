@@ -2,35 +2,19 @@
   "name": "signpost",
   "version": "0.0.1",
   "description": "a tiny, rapid http framework",
-  "main": "index.js",
-  "files": [
-    "index.js",
-    "lib",
-    "README.md"
-  ],
-  "scripts": {
-    "test": "autocannon -c 100 -d 10 -p 10 http://localhost:9000/test/500",
-    "test:koa": "autocannon -c 100 -d 10 -p 10 http://localhost:9001/test/500",
-    "test:express": "autocannon -c 100 -d 10 -p 10 http://localhost:9002/test/500",
-    "test:fastify": "autocannon -c 100 -d 10 -p 10 http://localhost:9003/test/500"
-  },
-  "keywords": [
-    "web",
-    "http",
-    "server"
-  ],
+  "private": true,
   "author": "Yorn Qiu",
   "license": "MIT",
-  "peerDependencies": {
-    "formidable": "^2.0.0"
-  },
   "devDependencies": {
     "@babel/core": "^7.21.3",
     "@babel/eslint-parser": "^7.21.3",
-    "bytes": "^3.1.2",
+    "@commitlint/config-conventional": "^17.6.6",
+    "commitlint": "^17.6.6",
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
     "prettier": "^2.8.6"
   },
   "eslintConfig": {
@@ -52,5 +36,31 @@
     "singleQuote": true,
     "semi": false,
     "printWidth": 120
+  },
+  "lint-staged": {
+    "*.{vue,js,ts,jsx,tsx}": "eslint --fix --ignore-path .gitignore"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "type-enum": [
+        2,
+        "always",
+        [
+          "feat",
+          "fix",
+          "docs",
+          "style",
+          "refactor",
+          "test",
+          "chore",
+          "build",
+          "perf",
+          "revert"
+        ]
+      ]
+    }
   }
 }

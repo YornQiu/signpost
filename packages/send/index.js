@@ -2,8 +2,8 @@
  * @Author: Yorn Qiu
  * @Date: 2022-06-06 17:51:08
  * @LastEditors: Yorn Qiu
- * @LastEditTime: 2024-01-17 16:33:36
- * @FilePath: /vivid/lib/send.js
+ * @LastEditTime: 2024-01-26 16:12:49
+ * @FilePath: /signpost/packages/send/index.js
  * @Description: send files
  */
 const { basename, normalize, resolve } = require('node:path')

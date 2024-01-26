@@ -7,19 +7,19 @@ Similar to Express, but built with async/await, and much faster.
 # Install
 
 ```
-npm install vivid
+npm install signpost
 ```
 
 # Usage
 
 ```
-const Vivid = require('@vivid/core')
-const router = require('@vivid/router')()
+const App = require('@signpost/core')
+const router = require('@signpost/router')()
 
-const app = new Vivid()
+const app = new App()
 
 router.get('/', async function (req, res) {
-  res.body = 'Hello Vivid!'
+  res.body = 'Hello Signpost!'
 })
 
 app.use(router.routes())
@@ -32,9 +32,9 @@ app.listen(3000)
 
 Performance test with autocannon
 
-- vivid
+- signpost
 
-![vivid](./images/1.png)
+![signpost](./images/1.png)
 
 - koa
 
