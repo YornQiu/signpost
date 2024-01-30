@@ -1,0 +1,24 @@
+{
+  "name": "signpost",
+  "version": "0.0.1",
+  "description": "a tiny, rapid http framework",
+  "private": true,
+  "author": "Yorn Qiu",
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "web",
+    "http",
+    "server"
+  ],
+  "dependencies": {
+    "@signpost/core": "workspace:*",
+    "@signpost/router": "workspace:*",
+    "@signpost/body": "workspace:*",
+    "@signpost/static": "workspace:*",
+    "@signpost/cors": "workspace:*",
+    "@signpost/send": "workspace:*"
+  }
+}

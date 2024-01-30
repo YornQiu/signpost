@@ -1,7 +1,7 @@
 {
   "name": "@signpost/core",
   "version": "0.0.1",
-  "description": "a tiny, rapid http framework",
+  "description": "signpost core",
   "private": true,
   "author": "Yorn Qiu",
   "license": "MIT",

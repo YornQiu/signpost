@@ -2,8 +2,8 @@
  * @Author: Yorn Qiu
  * @Date: 2022-06-07 14:18:04
  * @LastEditors: Yorn Qiu
- * @LastEditTime: 2024-01-17 16:21:04
- * @FilePath: /vivid/lib/static.js
+ * @LastEditTime: 2024-01-26 17:25:12
+ * @FilePath: /signpost/packages/static/index.js
  * @Description: serve static files
  */
 

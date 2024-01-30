@@ -1,5 +1,5 @@
-const Application = require('../lib/core/application')
-const router = require('../lib/router')()
+const Application = require('@signpost/core')
+const router = require('@signpost/router')()
 
 const app = new Application()
 
@@ -8,7 +8,7 @@ const app = new Application()
  */
 
 router.get('/', async function (req, res) {
-  res.body = 'Hello Vivid!'
+  res.body = 'Hello Signpost!'
 })
 
 app.use(router.routes())

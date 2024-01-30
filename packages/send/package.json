@@ -1,15 +1,11 @@
 {
   "name": "@signpost/send",
   "version": "0.0.1",
-  "description": "a tiny, rapid http framework",
+  "description": "file sender for signpost",
   "private": true,
   "author": "Yorn Qiu",
   "license": "MIT",
   "files": [
     "lib"
-  ],
-  "peerDependencies": {
-    "bytes": "^3.1.2",
-    "formidable": "^2.0.0"
-  }
+  ]
 }

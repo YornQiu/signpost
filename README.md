@@ -1,4 +1,4 @@
-# Vivid
+# Signpost
 
 A tiny, rapid http framework.
 
