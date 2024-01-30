@@ -17,8 +17,7 @@ module.exports = function responce(res) {
   })
 
   /**
-   * Returns true if the header identified by name is currently set in the outgoing headers.
-   * The header name matching is case-insensitive.
+   * Shorthand for hasHeader.
    */
   defineValue(res, 'has', function has(field) {
     return res.hasHeader(field)

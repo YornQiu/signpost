@@ -1,13 +1,12 @@
 {
-  "name": "@signpost/body",
+  "name": "@signpost/cookie",
   "version": "0.0.1",
-  "description": "body parser for signpost",
+  "description": "cookie middleware for signpost",
   "private": true,
   "author": "Yorn Qiu",
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
-    "bytes": "^3.1.2",
-    "formidable": "^2.0.0"
+    "cookies": "^0.9.1"
   }
 }

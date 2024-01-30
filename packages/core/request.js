@@ -22,19 +22,19 @@ module.exports = function request(req) {
     return host.split(/\s*,\s*/, 1)[0]
   })
 
-  defineGetter(req, 'hostname', function () {
-    const host = req.host
-    if (!host) return ''
-    // IPv6
-    return host[0] === '[' ? req.URL.hostname : host.split(':', 1)[0]
-  })
-
   defineGetter(req, 'origin', function () {
     return `${req.protocol}://${req.host}`
   })
 
   defineGetter(req, 'URL', function () {
     return new URL(`${req.origin}${req.url}`)
+  })
+
+  defineGetter(req, 'hostname', function () {
+    const host = req.host
+    if (!host) return ''
+    // IPv6
+    return host[0] === '[' ? req.URL.hostname : host.split(':', 1)[0]
   })
 
   defineGetter(req, 'pathname', function () {
@@ -61,18 +61,11 @@ module.exports = function request(req) {
     return req.socket.remoteAddress || ''
   })
 
-  defineGetter(req, 'type', function () {
-    return req.get('content-type')
-  })
-
-  defineGetter(req, 'length', function () {
-    return req.get('content-length')
-  })
-
-  defineGetter(req, 'encoding', function () {
-    return req.get('content-encoding')
-  })
-
+  /**
+   * Add req.get() method
+   * Get header value, case-insensitive
+   * @param {String} field
+   */
   Object.defineProperty(req, 'get', {
     configurable: true,
     enumerable: true,
@@ -85,12 +78,24 @@ module.exports = function request(req) {
     },
   })
 
+  defineGetter(req, 'type', function () {
+    return req.get('content-type')
+  })
+
+  defineGetter(req, 'length', function () {
+    return req.get('content-length')
+  })
+
+  defineGetter(req, 'encoding', function () {
+    return req.get('content-encoding')
+  })
+
   return req
 }
 
 /**
  * Helper function for creating a getter on an object.
- *
+ * configurable and enumerable are true
  * @param {Object} obj
  * @param {String} name
  * @param {Function} getter

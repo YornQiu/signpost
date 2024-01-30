@@ -5,13 +5,13 @@
   "private": true,
   "author": "Yorn Qiu",
   "license": "MIT",
-  "files": [
-    "index.js"
-  ],
+  "main": "index.js",
   "keywords": [
     "web",
     "http",
-    "server"
+    "server",
+    "web framework",
+    "backend"
   ],
   "dependencies": {
     "@signpost/core": "workspace:*",

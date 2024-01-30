@@ -5,12 +5,12 @@
   "private": true,
   "author": "Yorn Qiu",
   "license": "MIT",
-  "files": [
-    "application.js"
-  ],
+  "main": "application.js",
   "keywords": [
     "web",
     "http",
-    "server"
+    "server",
+    "web framework",
+    "backend"
   ]
 }

@@ -2,9 +2,9 @@
  * @Author: Yorn Qiu
  * @Date: 2022-05-24 12:26:56
  * @LastEditors: Yorn Qiu
- * @LastEditTime: 2024-01-26 16:13:29
+ * @LastEditTime: 2024-01-30 11:45:10
  * @FilePath: /signpost/packages/body/index.js
- * @Description:
+ * @Description: body parser
  */
 const parseJSON = require('./json')
 const parseUrlencoded = require('./urlencoded')
