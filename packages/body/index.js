@@ -2,7 +2,7 @@
  * @Author: Yorn Qiu
  * @Date: 2022-05-24 12:26:56
  * @LastEditors: Yorn Qiu
- * @LastEditTime: 2024-01-30 11:45:10
+ * @LastEditTime: 2024-01-30 18:03:45
  * @FilePath: /signpost/packages/body/index.js
  * @Description: body parser
  */
@@ -31,6 +31,8 @@ const reqType = {
  */
 module.exports = function (options) {
   return async function (req) {
+    if (!req.type) return
+
     const type = getType(req.type)
     const { jsonLimit, formLimit, textLimit, formidable, encoding, decoder } = options
 
