@@ -5,5 +5,8 @@
   "private": true,
   "author": "Yorn Qiu",
   "license": "MIT",
-  "main": "index.js"
+  "main": "index.js",
+  "peerDependencies": {
+    "@signpost/send": "*"
+  }
 }

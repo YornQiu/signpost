@@ -2,7 +2,7 @@
  * @Author: Yorn Qiu
  * @Date: 2022-06-07 14:18:04
  * @LastEditors: Yorn Qiu
- * @LastEditTime: 2024-01-26 17:25:12
+ * @LastEditTime: 2024-01-31 15:06:35
  * @FilePath: /signpost/packages/static/index.js
  * @Description: serve static files
  */
@@ -12,13 +12,13 @@ const assert = require('node:assert')
 
 /**
  * Serve files in root directory
- * @param {object} globalOptions
+ * @param {object|string} globalOptions - root directory or options
  * @param {string} globalOptions.root
- * @param {string} globalOptions.index
+ * @param {string} globalOptions.index  default to 'index.html'
  * @returns
  */
 module.exports = function (globalOptions) {
-  const { root } = globalOptions
+  const root = typeof globalOptions === 'string' ? globalOptions : globalOptions?.root
 
   assert(root, 'root is required')
 
@@ -28,6 +28,9 @@ module.exports = function (globalOptions) {
   }
 
   return async function static(req, res) {
+    if (typeof res.send !== 'function')
+      throw new Error('@signpost/send or alternative is required, have you ever installed it?')
+
     // serve only on GET or HEAD requests
     if (req.method !== 'HEAD' && req.method !== 'GET') return
     // response is already handled
