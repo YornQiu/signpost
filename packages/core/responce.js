@@ -154,8 +154,7 @@ module.exports = function responce(res) {
         res.remove('Content-Length')
         res.remove('Transfer-Encoding')
         res.status = 204
-
-        return
+        res._body = this.type === 'application/json' ? 'null' : null
       }
 
       // string

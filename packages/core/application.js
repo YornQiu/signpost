@@ -2,13 +2,13 @@
  * @Author: Yorn Qiu
  * @Date: 2022-05-23 09:55:40
  * @LastEditors: Yorn Qiu
- * @LastEditTime: 2024-01-30 11:45:25
+ * @LastEditTime: 2024-01-31 15:35:00
  * @FilePath: /signpost/packages/core/application.js
  * @Description: signpost application core
  */
 const EventEmitter = require('node:events')
-const http = require('node:http')
 const Stream = require('node:stream')
+const http = require('node:http')
 const request = require('./request')
 const responce = require('./responce')
 
@@ -18,38 +18,58 @@ module.exports = class Application extends EventEmitter {
     this.proxy = options.proxy || false
     this.proxyIpHeader = options.proxyIpHeader || 'X-Forwarded-For'
     this.maxIpsCount = options.maxIpsCount || 0
+    this.onerror = options.onerror || null
     this.middleware = []
   }
 
+  /**
+   * Create http.Server and listen on given port
+   * @param  {...any} args args for http.Server.listen()
+   * @returns http.Server
+   */
   listen(...args) {
     return http.createServer(this.listener()).listen(...args)
   }
 
+  /**
+   * Http listeners
+   */
   listener() {
     return (req, res) => {
       return this.handleRequest(request(req), responce(res))
     }
   }
 
+  /**
+   * Register middleware
+   * @param {*} fn middleware
+   * @returns this
+   */
   use(fn) {
     if (typeof fn !== 'function') throw new TypeError('middleware must be a function!')
     this.middleware.push(fn)
     return this
   }
 
+  /**
+   * Handle request
+   * @param {http.req} req
+   * @param {http.res} res
+   */
   async handleRequest(req, res) {
     try {
       res.statusCode = 404
       await sequence([...this.middleware], req, res)
-      handleResponse(req, res)
     } catch (error) {
-      handleError(error)
+      this.onerror?.(error, req, res) || handleError(error)
     }
+
+    handleResponse(req, res)
   }
 }
 
 /**
- * execute middleware in sequence
+ * Execute middleware in sequence
  * @param {Array<func>} handlers
  * @param {http.req} req
  * @param {http.res} res
@@ -67,7 +87,9 @@ async function sequence(handlers, req, res) {
 }
 
 /**
- * handle responce
+ * Handle responce.
+ * In the end, we need to call res.end() to finish the response.
+ * When the response is already sent, just skip it.
  * @param {http.req} req
  * @param {http.res} res
  */
@@ -86,7 +108,7 @@ function handleResponse(req, res) {
 }
 
 /**
- * handle error
+ * Handle error
  * @param {Error} err
  */
 function handleError(err) {
