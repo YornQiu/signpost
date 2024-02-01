@@ -1,7 +1,7 @@
 {
-  "name": "@signpost/router",
+  "name": "@veloc/router",
   "version": "0.0.1",
-  "description": "router for signpost",
+  "description": "router for veloc",
   "author": "Yorn Qiu",
   "license": "MIT",
   "main": "index.js"

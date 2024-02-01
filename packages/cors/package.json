@@ -1,7 +1,7 @@
 {
-  "name": "@signpost/cors",
+  "name": "@veloc/cors",
   "version": "0.0.1",
-  "description": "CORS middleware for signpost",
+  "description": "CORS middleware for veloc",
   "author": "Yorn Qiu",
   "license": "MIT",
   "main": "index.js"

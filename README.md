@@ -1,4 +1,4 @@
-# Signpost
+# Veloc
 
 A tiny, rapid http framework.
 
@@ -7,19 +7,19 @@ Similar to Express, but built with async/await, and much faster.
 # Install
 
 ```
-npm install signpost
+npm install veloc
 ```
 
 # Usage
 
 ```
-const App = require('@signpost/core')
-const router = require('@signpost/router')()
+const App = require('@veloc/core')
+const router = require('@veloc/router')()
 
 const app = new App()
 
 router.get('/', async function (req, res) {
-  res.body = 'Hello Signpost!'
+  res.body = 'Hello Veloc!'
 })
 
 app.use(router.routes())
@@ -32,9 +32,9 @@ app.listen(3000)
 
 Performance test with autocannon
 
-- signpost
+- veloc
 
-![signpost](./images/1.png)
+![veloc](./images/1.png)
 
 - koa
 
@@ -48,7 +48,7 @@ Performance test with autocannon
 
 ![fastify](./images/4.png)
 
-Signpost is faster than koa and express.
+Veloc is faster than koa and express.
 
 # Licence
 

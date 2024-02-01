@@ -1,11 +1,11 @@
 {
-  "name": "@signpost/static",
+  "name": "@veloc/static",
   "version": "0.0.1",
-  "description": "static assets for signpost",
+  "description": "static assets for veloc",
   "author": "Yorn Qiu",
   "license": "MIT",
   "main": "index.js",
   "peerDependencies": {
-    "@signpost/send": "*"
+    "@veloc/send": "*"
   }
 }

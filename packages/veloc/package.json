@@ -1,5 +1,5 @@
 {
-  "name": "signpost",
+  "name": "veloc",
   "version": "0.0.1",
   "description": "a tiny, rapid http framework",
   "author": "Yorn Qiu",
@@ -13,11 +13,11 @@
     "backend"
   ],
   "dependencies": {
-    "@signpost/core": "workspace:*",
-    "@signpost/router": "workspace:*",
-    "@signpost/body": "workspace:*",
-    "@signpost/static": "workspace:*",
-    "@signpost/cors": "workspace:*",
-    "@signpost/send": "workspace:*"
+    "@veloc/core": "workspace:*",
+    "@veloc/router": "workspace:*",
+    "@veloc/body": "workspace:*",
+    "@veloc/static": "workspace:*",
+    "@veloc/cors": "workspace:*",
+    "@veloc/send": "workspace:*"
   }
 }

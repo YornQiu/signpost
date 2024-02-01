@@ -1,7 +1,7 @@
 {
-  "name": "@signpost/send",
+  "name": "@veloc/send",
   "version": "0.0.1",
-  "description": "file sender for signpost",
+  "description": "file sender for veloc",
   "author": "Yorn Qiu",
   "license": "MIT",
   "main": "index.js"

@@ -1,7 +1,7 @@
 {
-  "name": "@signpost/body",
+  "name": "@veloc/body",
   "version": "0.0.1",
-  "description": "body parser for signpost",
+  "description": "body parser for veloc",
   "author": "Yorn Qiu",
   "license": "MIT",
   "main": "index.js",

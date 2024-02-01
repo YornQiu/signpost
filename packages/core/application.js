@@ -3,8 +3,8 @@
  * @Date: 2022-05-23 09:55:40
  * @LastEditors: Yorn Qiu
  * @LastEditTime: 2024-01-31 15:35:00
- * @FilePath: /signpost/packages/core/application.js
- * @Description: signpost application core
+ * @FilePath: /veloc/packages/core/application.js
+ * @Description: veloc application core
  */
 const EventEmitter = require('node:events')
 const Stream = require('node:stream')

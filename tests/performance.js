@@ -8,8 +8,8 @@ const express = require('express')
 
 const fastify = require('fastify')()
 
-const Application = require('@signpost/core')
-const Router = require('@signpost/router')
+const Application = require('@veloc/core')
+const Router = require('@veloc/router')
 
 const koaApp = new Koa()
 const koaRouter = new KoaRouter()
@@ -36,7 +36,7 @@ for (let i = 1; i <= 1000; i++) {
   fastify.get(`/test/${i}/:id`, async (req, reply) => reply.send('ok'))
 }
 
-sApp.use(sRouter.routes()).listen(9000, () => console.log(`Signpost listening at 9000`))
+sApp.use(sRouter.routes()).listen(9000, () => console.log(`Veloc listening at 9000`))
 koaApp.use(koaRouter.routes()).listen(9001, () => console.log(`Koa listening at 9001`))
 exApp.use(exRouter).listen(9002, () => console.log(`Express listening at 9002`))
 fastify.listen({ port: 9003 }, () => console.log(`Fastify listening at 9003`))

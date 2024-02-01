@@ -3,7 +3,7 @@
  * @Date: 2022-05-25 18:12:46
  * @LastEditors: Yorn Qiu
  * @LastEditTime: 2024-01-26 16:13:05
- * @FilePath: /signpost/packages/cors/index.js
+ * @FilePath: /veloc/packages/cors/index.js
  * @Description: cors
  */
 

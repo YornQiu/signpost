@@ -1,5 +1,5 @@
-const Application = require('@signpost/core')
-const router = require('@signpost/router')()
+const Application = require('@veloc/core')
+const router = require('@veloc/router')()
 
 const app = new Application()
 
@@ -8,7 +8,7 @@ const app = new Application()
  */
 
 router.get('/', async function (req, res) {
-  res.body = 'Hello Signpost!'
+  res.body = 'Hello Veloc!'
 })
 
 app.use(router.routes())

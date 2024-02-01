@@ -1,7 +1,7 @@
 {
-  "name": "@signpost/core",
+  "name": "@veloc/core",
   "version": "0.0.1",
-  "description": "signpost core",
+  "description": "veloc core",
   "author": "Yorn Qiu",
   "license": "MIT",
   "main": "application.js",
@@ -11,5 +11,16 @@
     "server",
     "web framework",
     "backend"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YornQiu/veloc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YornQiu/veloc/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }

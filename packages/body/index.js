@@ -3,7 +3,7 @@
  * @Date: 2022-05-24 12:26:56
  * @LastEditors: Yorn Qiu
  * @LastEditTime: 2024-01-30 18:03:45
- * @FilePath: /signpost/packages/body/index.js
+ * @FilePath: /veloc/packages/body/index.js
  * @Description: body parser
  */
 const parseJSON = require('./json')

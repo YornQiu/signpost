@@ -1,7 +1,7 @@
 {
-  "name": "@signpost/cookie",
+  "name": "@veloc/cookie",
   "version": "0.0.1",
-  "description": "cookie middleware for signpost",
+  "description": "cookie middleware for veloc",
   "author": "Yorn Qiu",
   "license": "MIT",
   "main": "index.js",

@@ -2,8 +2,8 @@
  * @Author: Yorn Qiu
  * @Date: 2022-06-07 14:18:04
  * @LastEditors: Yorn Qiu
- * @LastEditTime: 2024-01-31 15:06:35
- * @FilePath: /signpost/packages/static/index.js
+ * @LastEditTime: 2024-02-01 17:51:08
+ * @FilePath: /veloc/packages/static/index.js
  * @Description: serve static files
  */
 
@@ -29,7 +29,7 @@ module.exports = function (globalOptions) {
 
   return async function static(req, res) {
     if (typeof res.send !== 'function')
-      throw new Error('@signpost/send or alternative is required, have you ever installed it?')
+      throw new Error('@veloc/send or alternative is required, have you ever installed it?')
 
     // serve only on GET or HEAD requests
     if (req.method !== 'HEAD' && req.method !== 'GET') return
