@@ -2,7 +2,6 @@
   "name": "@signpost/send",
   "version": "0.0.1",
   "description": "file sender for signpost",
-  "private": true,
   "author": "Yorn Qiu",
   "license": "MIT",
   "main": "index.js"

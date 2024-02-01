@@ -2,7 +2,6 @@
   "name": "@signpost/body",
   "version": "0.0.1",
   "description": "body parser for signpost",
-  "private": true,
   "author": "Yorn Qiu",
   "license": "MIT",
   "main": "index.js",

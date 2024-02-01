@@ -2,7 +2,6 @@
   "name": "@signpost/static",
   "version": "0.0.1",
   "description": "static assets for signpost",
-  "private": true,
   "author": "Yorn Qiu",
   "license": "MIT",
   "main": "index.js",
