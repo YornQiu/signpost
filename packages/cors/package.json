@@ -4,5 +4,16 @@
   "description": "CORS middleware for veloc",
   "author": "Yorn Qiu",
   "license": "MIT",
-  "main": "index.js"
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YornQiu/veloc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YornQiu/veloc/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }

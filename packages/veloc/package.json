@@ -19,5 +19,16 @@
     "@veloc/static": "workspace:*",
     "@veloc/cors": "workspace:*",
     "@veloc/send": "workspace:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YornQiu/veloc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YornQiu/veloc/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }

@@ -8,5 +8,16 @@
   "dependencies": {
     "bytes": "^3.1.2",
     "formidable": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YornQiu/veloc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YornQiu/veloc/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
