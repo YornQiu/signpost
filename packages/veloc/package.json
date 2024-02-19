@@ -4,11 +4,7 @@
   "description": "a tiny, rapid http framework",
   "author": "Yorn Qiu",
   "license": "MIT",
-  "main": "./index.js",
-  "files": [
-    "dist",
-    "index.js"
-  ],
+  "main": "index.js",
   "keywords": [
     "web",
     "http",
@@ -16,8 +12,17 @@
     "web framework",
     "backend"
   ],
+  "dependencies": {
+    "@veloc/core": "workspace:*",
+    "@veloc/router": "workspace:*",
+    "@veloc/body": "workspace:*",
+    "@veloc/static": "workspace:*",
+    "@veloc/cookie": "workspace:*",
+    "@veloc/send": "workspace:*",
+    "@veloc/cors": "workspace:*"
+  },
   "scripts": {
-    "build": "gulp"
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
